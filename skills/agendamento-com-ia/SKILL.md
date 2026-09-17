@@ -1,17 +1,17 @@
 ---
-name: agendamento-com-claude
+name: agendamento-com-ia
 description: Cria eventos na Google Agenda conectada a partir de um pedido em linguagem natural. Use when the user asks to schedule something, "marca uma reuniao com fulano amanha as 10", "agenda um compromisso", "bota isso na minha agenda".
 ---
 
-# Agendamento com Claude
+# Agendamento com IA
 
 Cria um evento na Google Agenda conectada a partir de um pedido em
 linguagem natural, sempre confirmando antes de criar de verdade.
 
 ## Pre-voo (Google)
 
-1. Confira se ha ferramenta de Google Calendar. Se nao: oriente Conectores
-   no claude.ai, peca `pronto, conectei` e pare.
+1. Confira se ha ferramenta de Google Calendar. Se nao: oriente
+   Configuracoes → Conectores no site da conta, peca `pronto, conectei` e pare.
 2. Se houver: avise sobre a tela de **Permitir** (leitura/escrita na
    agenda). Chame ferramentas de checagem na hora; se pedir autorizacao,
    reexecute imediatamente apos o Permitir.

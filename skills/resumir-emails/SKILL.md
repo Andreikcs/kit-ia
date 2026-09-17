@@ -11,7 +11,7 @@ direto ao ponto.
 ## Pre-voo (Google)
 
 1. Confira se ha ferramenta de Gmail. Se nao: oriente Conectores no
-   claude.ai, peca `pronto, conectei` e pare.
+   Configuracoes → Conectores no site da conta, peca `pronto, conectei` e pare.
 2. Se houver: avise sobre a tela de **Permitir**, chame a ferramenta na
    hora; se pedir autorizacao, reexecute imediatamente apos o Permitir.
 

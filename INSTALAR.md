@@ -32,8 +32,10 @@ instalar tudo pra você — você só acompanha.”
 1. Copie **todas** as pastas de `skills/` para `~/.claude/skills/` (crie
    se não existir):
    - no chat: `ler-emails`, `resumir-emails`, `resumo-agenda`,
-     `agendamento-com-claude`, `envio-de-emails-com-claude`
+     `agendamento-com-ia`, `envio-de-emails-com-ia`
    - de manhã: `briefing-emails-manha`, `briefing-agenda-manha`
+   - se existirem pastas antigas `*-com-claude`, apague-as (o app não
+     aceita esse nome)
 2. **Fale:** “Pronto — a **smark.** instalou suas automações.” Liste os
    nomes em uma linha cada, bem curta.
 

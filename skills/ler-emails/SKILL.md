@@ -1,18 +1,18 @@
 ---
 name: ler-emails
-description: Lista e le e-mails recentes do Gmail conectado ao Claude (nao lidos, de um remetente, de hoje, etc). Use when the user asks to check inbox, "o que chegou no e-mail", "tem e-mail novo", "e-mails de hoje", "e-mails nao lidos".
+description: Lista e le e-mails recentes do Gmail conectado (nao lidos, de um remetente, de hoje, etc). Use when the user asks to check inbox, "o que chegou no e-mail", "tem e-mail novo", "e-mails de hoje", "e-mails nao lidos".
 ---
 
 # Ler e-mails
 
-Le a caixa de entrada do Gmail conectado a esta conta Claude e mostra os
+Le a caixa de entrada do Gmail conectado a esta conta e mostra os
 e-mails relevantes de forma resumida e facil de escanear.
 
 ## Pre-voo (Google)
 
 1. Confira se ha ferramenta de Gmail nesta sessao.
-2. Se nao houver: oriente `claude.ai → Configuracoes → Conectores → Gmail`,
-   peca `pronto, conectei` e pare. Nao invente e-mail.
+2. Se nao houver: oriente Configuracoes → Conectores → Gmail no site da
+   conta, peca `pronto, conectei` e pare. Nao invente e-mail.
 3. Se houver: avise que pode abrir tela de autorizacao da Google — a pessoa
    deve clicar em **Permitir**. Em seguida chame a ferramenta **na hora**.
 4. Se falhar por falta de autorizacao: espere o Permitir e **reexecute a

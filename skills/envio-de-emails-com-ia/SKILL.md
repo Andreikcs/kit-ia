@@ -1,17 +1,17 @@
 ---
-name: envio-de-emails-com-claude
+name: envio-de-emails-com-ia
 description: Redige e envia e-mails pelo Gmail conectado, sempre mostrando o rascunho e pedindo confirmacao antes de enviar. Use when the user asks to send or reply to an email, "manda um e-mail pra fulano", "responde esse e-mail", "escreve e envia um e-mail sobre X".
 ---
 
-# Envio de e-mails com Claude
+# Envio de e-mails com IA
 
 Redige um e-mail (novo ou resposta) a partir do pedido do usuario e so
 envia depois de confirmacao explicita — nunca envia direto.
 
 ## Pre-voo (Google)
 
-1. Confira se ha ferramenta de Gmail. Se nao: oriente Conectores no
-   claude.ai, peca `pronto, conectei` e pare.
+1. Confira se ha ferramenta de Gmail. Se nao: oriente Configuracoes →
+   Conectores no site da conta, peca `pronto, conectei` e pare.
 2. Se houver: avise sobre a tela de **Permitir**. Se a autorizacao for
    pedida ao enviar, reexecute o envio **imediatamente** apos o Permitir
    — sem pedir o texto do e-mail de novo.

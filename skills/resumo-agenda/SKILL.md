@@ -11,7 +11,7 @@ compromissos do periodo pedido (hoje, por padrao).
 ## Pre-voo (Google)
 
 1. Confira se ha ferramenta de Google Calendar / Agenda. Se nao: oriente
-   Conectores no claude.ai, peca `pronto, conectei` e pare.
+   Configuracoes → Conectores no site da conta, peca `pronto, conectei` e pare.
 2. Se houver: avise que pode abrir tela de **Permitir**, chame a listagem
    de eventos **na hora**; se pedir autorizacao, reexecute imediatamente
    apos o Permitir. Nao invente compromissos.
@@ -30,4 +30,4 @@ compromissos do periodo pedido (hoje, por padrao).
 ## Regra
 
 So le e mostra. Nao cria, edita nem cancela nada aqui — isso e a skill
-`agendamento-com-claude`.
+`agendamento-com-ia`.

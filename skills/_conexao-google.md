@@ -8,7 +8,7 @@ de Gmail ou Agenda.
 1. Confira se existem ferramentas de **Gmail** e/ou **Google Calendar**
    nesta sessão.
 2. Se **não existirem**: pare. Diga pra pessoa ir em
-   `claude.ai → Configurações → Conectores`, ativar Gmail e Google Calendar,
+   Configurações → Conectores no site da conta, ativar Gmail e Google Calendar,
    voltar e escrever `pronto, conectei`. Não invente dados.
 3. Se **existirem**: avise em uma frase que pode abrir uma tela de
    autorização da Google e que ela deve clicar em **Permitir**.
