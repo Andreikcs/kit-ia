@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kit IA smark.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800&display=swap">
+<style>
+:root{
+  --bg:#F7F6FC; --surface:#FFFFFF; --surface-2:#EFEBFB; --ink:#100D1C; --sub:#57517A; --line:rgba(16,13,28,.10);
+  --violet:#8B3CF7; --violet-l:#7C3AED; --grad:linear-gradient(155deg,#9A4DFF 0%,#6A2CE0 100%);
+  --display:'Anton',Impact,'Arial Narrow',sans-serif;
+  --text:'Archivo',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif;
+}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--text);padding-inline:20px;overflow-x:hidden}
+.wrap{max-width:560px;width:100%;margin:0 auto;padding-block:36px 56px}
+.top{display:flex;align-items:center;gap:12px;margin-bottom:48px}
+.mark{flex:none;width:38px;height:38px;border-radius:11px;background:var(--grad);display:grid;place-items:center;box-shadow:0 6px 16px -6px rgba(139,60,247,.55)}
+.mark svg{width:19px;height:19px}
+.logo{font:800 24px/1 var(--text);color:var(--ink)}
+.logo i{font-style:normal;color:var(--violet)}
+.eyebrow{font:700 12px/1 var(--text);letter-spacing:.18em;text-transform:uppercase;color:var(--violet-l);margin:0 0 14px}
+h1{font:400 44px/1.02 var(--display);text-transform:uppercase;margin:0 0 16px;text-wrap:balance;letter-spacing:-.01em}
+h1 em{font-style:normal;color:var(--violet-l)}
+.lede{font:500 17px/1.55 var(--text);color:var(--sub);margin:0 0 44px;max-width:46ch}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:28px 24px;margin-bottom:20px}
+.card .eyebrow{margin-bottom:10px}
+.card h2{font:400 26px/1.08 var(--display);text-transform:uppercase;margin:0 0 10px;text-wrap:balance}
+.card p{font:500 15.5px/1.55 var(--text);color:var(--sub);margin:0 0 20px}
+.btnrow{display:flex;flex-wrap:wrap;gap:10px}
+.btn{font:700 14px/1 var(--text);border:0;border-radius:999px;padding:14px 22px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:transform .15s ease}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--grad);color:#fff}
+.btn-secondary{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.btn:focus-visible{outline:3px solid var(--violet-l);outline-offset:2px}
+.list5{list-style:none;margin:0 0 22px;padding:0;display:grid;gap:9px}
+.list5 li{font:600 14.5px/1.4 var(--text);color:var(--ink);display:flex;gap:10px;align-items:flex-start}
+.list5 li b{flex:none;width:22px;height:22px;border-radius:7px;background:rgba(139,60,247,.14);color:var(--violet-l);font:800 12px/22px var(--text);text-align:center}
+.steps{list-style:none;margin:22px 0;padding:0;counter-reset:step;display:grid;gap:12px}
+.steps li{counter-increment:step;font:500 14.5px/1.5 var(--text);color:var(--sub);display:flex;gap:12px}
+.steps li::before{content:counter(step);flex:none;width:24px;height:24px;border-radius:50%;background:var(--grad);color:#fff;font:800 12px/24px var(--text);text-align:center}
+.steps li code{background:rgba(139,60,247,.12);color:var(--ink);padding:1px 6px;border-radius:5px;font-family:ui-monospace,Menlo,monospace;font-size:13px}
+.promptbox{position:relative;background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:18px 16px;margin-top:6px}
+.promptbox pre{margin:0;white-space:pre-wrap;word-break:break-word;font:400 12.5px/1.6 ui-monospace,Menlo,Consolas,monospace;color:var(--sub);max-height:260px;overflow-y:auto}
+.copybtn{font:700 12px var(--text);border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:7px 14px;cursor:pointer;margin-top:12px}
+.copybtn:active{transform:scale(.97)}
+.fallback{font:500 13px/1.5 var(--text);color:var(--sub);margin-top:10px}
+.foot{margin-top:48px;padding-top:32px;border-top:1px solid var(--line);text-align:center;display:grid;gap:10px;justify-items:center}
+.foot .mark{margin-bottom:2px}
+.foot .logo{font-size:20px}
+.foot p{margin:0;font:500 13px/1.5 var(--text);color:var(--sub);max-width:34ch}
+.foot .fine{font:600 11px/1 var(--text);letter-spacing:.1em;text-transform:uppercase;color:#8C87A6;margin-top:6px}
+@media (max-width:420px){
+  h1{font-size:36px}
+  .card{padding:22px 18px}
+}
+</style>
+</head>
+<body>
+
+
+<div class="wrap">
+  <div class="top">
+    <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="6" cy="7" r="2" fill="#fff"/><circle cx="18" cy="6" r="1.6" fill="#fff" opacity=".85"/><circle cx="17" cy="17" r="2.2" fill="#fff"/><circle cx="7" cy="18" r="1.4" fill="#fff" opacity=".85"/><path d="M6 7L17 17M6 7L18 6M17 17L7 18" stroke="#fff" stroke-width="1.3" stroke-linecap="round" opacity=".7"/></svg></span>
+    <span class="logo">smark<i>.</i></span>
+  </div>
+
+  <p class="eyebrow">Seu kit de IA</p>
+  <h1>Bora tirar <em>do papel.</em></h1>
+  <p class="lede">Dois acessos pra você começar a usar inteligência artificial na sua operação agora — sem enrolação, sem etapa escondida.</p>
+
+  <div class="card">
+    <p class="eyebrow">Benefício 1</p>
+    <h2>ToStudy.AI com desconto</h2>
+    <p>Plataforma de estudos em IA. Ativa pelo link de indicação e o desconto de aluno smark. entra automático — se já tem conta, é só fazer login.</p>
+    <div class="btnrow">
+      <a class="btn btn-primary" href="https://tostudy.ai/r/SS5NQSX6" target="_blank" rel="noopener">Ativar com desconto</a>
+      <a class="btn btn-secondary" href="https://tostudy.ai/pt-BR/login" target="_blank" rel="noopener">Já tenho conta</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <p class="eyebrow">Benefício 2</p>
+    <h2>5 automações prontas com Claude</h2>
+    <p>Direto no seu Claude Code, usando Gmail e Google Agenda — sem gambiarra, sem mandar nada sem você ver antes.</p>
+    <ul class="list5">
+      <li><b>1</b> Ler e-mails</li>
+      <li><b>2</b> Resumir e-mails</li>
+      <li><b>3</b> Resumo de agenda</li>
+      <li><b>4</b> Agendamento com Claude</li>
+      <li><b>5</b> Envio de e-mails com Claude</li>
+    </ul>
+    <div class="btnrow">
+      <button class="btn btn-primary" id="btn-baixar" onclick="baixarPack()">Baixar o pack (.zip)</button>
+    </div>
+    <p class="fallback" id="baixar-fallback" hidden>Não consegui iniciar o download por aqui. Abra este link direto no navegador (fora do chat) e tenta de novo.</p>
+
+    <ol class="steps">
+      <li><span>Baixe o zip acima e descompacte numa pasta qualquer.</span></li>
+      <li><span>Abra essa pasta com o <b>Claude Code</b> (digite <code>claude</code> no terminal, dentro da pasta).</span></li>
+      <li><span>Copie o texto abaixo e cole na conversa — o Claude instala e te guia no resto.</span></li>
+    </ol>
+
+    <div class="promptbox">
+      <pre id="prompt-text">Você é o Claude Code rodando na máquina de uma pessoa que acabou de baixar
+o pack de automações da smark. Siga estes passos, indo um de cada vez e
+conversando com a pessoa no caminho — ela pode não ser técnica, então
+explique tudo em linguagem simples.
+
+1. Copie as 5 pastas que estão dentro de `skills/` (nesta mesma pasta onde
+   este arquivo está) para `~/.claude/skills/` — crie o diretório se ele
+   não existir. Depois confirme pra pessoa que as 5 automações foram
+   instaladas, listando os nomes.
+2. Pergunte pra pessoa se ela já conectou o Gmail e a Google Agenda no
+   Claude. Se ela não souber, explique: "isso se faz em claude.ai, no menu
+   Configurações -> Conectores -> ative Gmail e Google Calendar. Depois
+   volta aqui." Espere ela confirmar antes de seguir.
+3. Depois de confirmado, ofereça rodar uma automação de teste — sugira
+   "resumo-agenda" ou "ler-emails" por serem as mais rápidas de mostrar
+   valor. Rode a que ela escolher.
+4. Feche explicando rápido as 5 automações disponíveis e como chamar cada
+   uma numa frase (ex: "é só pedir 'resume meus e-mails de hoje'").
+
+Não pule etapas e não assuma que a pessoa sabe o que é MCP, conector ou
+skill — trate tudo isso como "conectar sua conta" e "automações prontas".</pre>
+      <button class="copybtn" onclick="copiarPrompt()" id="btn-copiar">Copiar prompt</button>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="6" cy="7" r="2" fill="#fff"/><circle cx="18" cy="6" r="1.6" fill="#fff" opacity=".85"/><circle cx="17" cy="17" r="2.2" fill="#fff"/><circle cx="7" cy="18" r="1.4" fill="#fff" opacity=".85"/><path d="M6 7L17 17M6 7L18 6M17 17L7 18" stroke="#fff" stroke-width="1.3" stroke-linecap="round" opacity=".7"/></svg></span>
+    <span class="logo">smark<i>.</i></span>
+    <p>Assessoria tecnológica em IA aplicada ao seu negócio.</p>
+    <p class="fine">smark.</p>
+  </div>
+</div>
+
+<script>
+const PACK_ZIP_B64 = "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";
+
+function zipBlob(){
+  const bin = atob(PACK_ZIP_B64);
+  const bytes = new Uint8Array(bin.length);
+  for(let i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+  return new Blob([bytes], {type:'application/zip'});
+}
+
+async function baixarPack(){
+  const btn = document.getElementById('btn-baixar');
+  const fallback = document.getElementById('baixar-fallback');
+  fallback.hidden = true;
+  btn.textContent = 'Baixando...';
+  // Dentro do Artifact (claude.ai): usa a capability nativa de download.
+  try{
+    if(window.claude && typeof window.claude.use === 'function'){
+      const downloads = await window.claude.use('downloads');
+      if(downloads){
+        await downloads.save({filename:'pack-smark-claude.zip', data: zipBlob()});
+        btn.textContent = 'Baixado! ✓';
+        setTimeout(()=>{btn.textContent='Baixar o pack (.zip)';}, 2500);
+        return;
+      }
+    }
+  }catch(e){ /* segue pro fallback abaixo */ }
+  // Fora do Artifact (arquivo aberto direto no navegador): link normal com blob URL.
+  try{
+    const url = URL.createObjectURL(zipBlob());
+    const a = document.createElement('a');
+    a.href = url; a.download = 'pack-smark-claude.zip';
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(()=>URL.revokeObjectURL(url), 4000);
+    btn.textContent = 'Baixado! ✓';
+    setTimeout(()=>{btn.textContent='Baixar o pack (.zip)';}, 2500);
+  }catch(e){
+    fallback.hidden = false;
+    btn.textContent = 'Baixar o pack (.zip)';
+  }
+}
+
+async function copiarPrompt(){
+  const text = document.getElementById('prompt-text').textContent;
+  const btn = document.getElementById('btn-copiar');
+  try{
+    await navigator.clipboard.writeText(text);
+    btn.textContent = 'Copiado ✓';
+  }catch(e){
+    const range = document.createRange();
+    range.selectNode(document.getElementById('prompt-text'));
+    getSelection().removeAllRanges();
+    getSelection().addRange(range);
+    btn.textContent = 'Selecionado — Cmd/Ctrl+C';
+  }
+  setTimeout(()=>{btn.textContent='Copiar prompt';}, 2500);
+}
+</script>
+</body>
+</html>
