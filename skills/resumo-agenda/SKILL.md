@@ -8,6 +8,14 @@ description: Resume os compromissos do dia ou da semana na Google Agenda conecta
 Le a Google Agenda conectada e devolve um resumo cronologico dos
 compromissos do periodo pedido (hoje, por padrao).
 
+## Pre-voo (Google)
+
+1. Confira se ha ferramenta de Google Calendar / Agenda. Se nao: oriente
+   Conectores no claude.ai, peca `pronto, conectei` e pare.
+2. Se houver: avise que pode abrir tela de **Permitir**, chame a listagem
+   de eventos **na hora**; se pedir autorizacao, reexecute imediatamente
+   apos o Permitir. Nao invente compromissos.
+
 ## Como fazer
 
 1. Se o usuario nao especificar o periodo, assuma "hoje". Se pedir

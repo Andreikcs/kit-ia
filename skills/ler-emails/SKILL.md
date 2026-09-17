@@ -8,6 +8,16 @@ description: Lista e le e-mails recentes do Gmail conectado ao Claude (nao lidos
 Le a caixa de entrada do Gmail conectado a esta conta Claude e mostra os
 e-mails relevantes de forma resumida e facil de escanear.
 
+## Pre-voo (Google)
+
+1. Confira se ha ferramenta de Gmail nesta sessao.
+2. Se nao houver: oriente `claude.ai → Configuracoes → Conectores → Gmail`,
+   peca `pronto, conectei` e pare. Nao invente e-mail.
+3. Se houver: avise que pode abrir tela de autorizacao da Google — a pessoa
+   deve clicar em **Permitir**. Em seguida chame a ferramenta **na hora**.
+4. Se falhar por falta de autorizacao: espere o Permitir e **reexecute a
+   mesma chamada imediatamente**.
+
 ## Como fazer
 
 1. Se o pedido nao disser o filtro, pergunte rapido: nao lidos, de hoje, ou
@@ -26,6 +36,4 @@ explicitamente — essa skill so **le e mostra**, nao executa acoes.
 
 ## Se o Gmail nao estiver conectado
 
-Explique em uma frase: "Seu Gmail ainda nao esta conectado ao Claude. Va em
-claude.ai -> Configuracoes -> Conectores -> ative o Gmail, e me chama de
-novo." Nao tente adivinhar ou simular o conteudo do e-mail.
+Siga o Pre-voo. Nunca simule conteudo de e-mail.

@@ -8,6 +8,16 @@ description: Cria eventos na Google Agenda conectada a partir de um pedido em li
 Cria um evento na Google Agenda conectada a partir de um pedido em
 linguagem natural, sempre confirmando antes de criar de verdade.
 
+## Pre-voo (Google)
+
+1. Confira se ha ferramenta de Google Calendar. Se nao: oriente Conectores
+   no claude.ai, peca `pronto, conectei` e pare.
+2. Se houver: avise sobre a tela de **Permitir** (leitura/escrita na
+   agenda). Chame ferramentas de checagem na hora; se pedir autorizacao,
+   reexecute imediatamente apos o Permitir.
+3. A confirmacao do **preview do evento** (passo 4 abaixo) e separada da
+   autorizacao Google — uma nao substitui a outra.
+
 ## Como fazer
 
 1. Extraia do pedido: titulo, data, horario, duracao (assuma 1h se nao

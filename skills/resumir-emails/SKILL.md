@@ -8,6 +8,13 @@ description: Resume o conteudo de um e-mail especifico ou de uma thread inteira 
 Pega um e-mail ou thread do Gmail conectado e devolve um resumo curto,
 direto ao ponto.
 
+## Pre-voo (Google)
+
+1. Confira se ha ferramenta de Gmail. Se nao: oriente Conectores no
+   claude.ai, peca `pronto, conectei` e pare.
+2. Se houver: avise sobre a tela de **Permitir**, chame a ferramenta na
+   hora; se pedir autorizacao, reexecute imediatamente apos o Permitir.
+
 ## Como fazer
 
 1. Identifique qual e-mail/thread o usuario quer resumir (pelo assunto,
