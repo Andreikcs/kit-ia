@@ -95,8 +95,9 @@ h1 em{font-style:normal;color:var(--violet-l)}
     </ul>
     <div class="btnrow">
       <button class="btn btn-primary" id="btn-baixar" onclick="baixarPack()">Baixar o pack (.zip)</button>
+      <a class="btn btn-ghost" href="pack-smark-claude.zip" download="pack-smark-claude.zip">Link direto do .zip</a>
     </div>
-    <p class="fallback" id="baixar-fallback" hidden>Não consegui iniciar o download por aqui. Abra este link direto no navegador (fora do chat) e tenta de novo.</p>
+    <p class="fallback" id="baixar-fallback" hidden>Se o botão falhar, use o <a href="pack-smark-claude.zip" download="pack-smark-claude.zip">link direto do .zip</a>.</p>
 
     <ol class="steps">
       <li><span>Baixe o zip acima e descompacte numa pasta qualquer.</span></li>
@@ -165,8 +166,17 @@ async function baixarPack(){
       }
     }
   }catch(e){ /* segue pro fallback abaixo */ }
-  // Fora do Artifact (arquivo aberto direto no navegador): link normal com blob URL.
+  // Fora do Artifact: no GitHub Pages usa o ZIP estático; em file:// usa blob embutido.
   try{
+    if (location.protocol === 'http:' || location.protocol === 'https:') {
+      const a = document.createElement('a');
+      a.href = 'pack-smark-claude.zip';
+      a.download = 'pack-smark-claude.zip';
+      document.body.appendChild(a); a.click(); a.remove();
+      btn.textContent = 'Baixado! ✓';
+      setTimeout(()=>{btn.textContent='Baixar o pack (.zip)';}, 2500);
+      return;
+    }
     const url = URL.createObjectURL(zipBlob());
     const a = document.createElement('a');
     a.href = url; a.download = 'pack-smark-claude.zip';
