@@ -49,8 +49,8 @@ Agenda estão conectados. Não precisa fazer nada ainda.”
 1. Procure ferramentas de **Gmail** e **Google Agenda / Calendar**.
 2. Se **não tiver**:
    - **Fale:** “Falta um clique: conectar sua conta Google.”
-   - Oriente: `claude.ai → Configurações → Conectores → ative Gmail e
-     Google Calendar`.
+   - Oriente: site da conta → Configurações → Conectores → ative Gmail e
+     Google Calendar.
    - Peça pra digitar `pronto` quando terminar. **Pare aqui**.
 3. Se **tiver**:
    - **Fale:** “Conta encontrada. Vou abrir sua agenda. Se aparecer uma
