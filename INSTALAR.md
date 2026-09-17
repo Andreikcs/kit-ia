@@ -11,11 +11,13 @@ começo — você conduz.
 
 ## Etapa 0 — Instalar (você faz)
 
-1. Copie as pastas de `skills/` para `~/.claude/skills/` (crie se não
-   existir): `ler-emails`, `resumir-emails`, `resumo-agenda`,
-   `agendamento-com-claude`, `envio-de-emails-com-claude`.
-2. Diga só: “Pronto — as 5 automações já estão instaladas.” Liste os
-   nomes em uma linha cada, bem curta.
+1. Copie **todas** as pastas de `skills/` para `~/.claude/skills/` (crie
+   se não existir), incluindo:
+   - no chat: `ler-emails`, `resumir-emails`, `resumo-agenda`,
+     `agendamento-com-claude`, `envio-de-emails-com-claude`
+   - de manhã: `briefing-emails-manha`, `briefing-agenda-manha`
+2. Diga: “Pronto — as automações do dia a dia e os briefings de manhã
+   já estão instalados.” Liste os nomes em uma linha cada, bem curta.
 
 ---
 
@@ -91,20 +93,65 @@ Só depois das Etapas 2 e 3, mostre este menu (pode colar quase assim):
 - “Marca reunião com a Ana amanhã às 10”
   → eu mostro o preview; só crio se você disser **pode criar**
 
+**Toda manhã (automático)**
+- Às **7:45** eu te mando sozinho: 3 e-mails principais + próximos 3
+  compromissos (duas rotinas). Você só abre a notificação se quiser.
+
 **Dica:** quanto mais claro o nome, a data e o que você quer, mais
 rápido eu faço.
 
 ---
 
-Pergunte no final, **uma** coisa só: “Quer que eu faça mais alguma
-coisa agora — e-mail ou agenda?”
+## Etapa 5 — Ligar as 2 rotinas das 7:45 (você faz sozinho)
+
+Depois do menu, **instale as duas rotinas sem pedir permissão extra**
+(é o combinado deste pack). Use o comando `/schedule` (ou `/routines`).
+
+### Rotina 1 — e-mails
+
+Rode (ou peça equivalente conversando):
+
+```
+/schedule todo dia às 7:45 da manhã no horário local: briefing matinal de e-mails da smark. Leia o arquivo rotinas/PROMPT-briefing-emails-0745.md nesta pasta (ou o texto dele) e execute exatamente isso. Nome da rotina: briefing-emails-manha-smark
+```
+
+Se `/schedule` pedir confirmação de horário/prompt, confirme **7:45 todos
+os dias** e o texto de `rotinas/PROMPT-briefing-emails-0745.md`.
+
+### Rotina 2 — agenda
+
+```
+/schedule todo dia às 7:45 da manhã no horário local: briefing matinal de agenda da smark. Leia o arquivo rotinas/PROMPT-briefing-agenda-0745.md nesta pasta (ou o texto dele) e execute exatamente isso. Nome da rotina: briefing-agenda-manha-smark
+```
+
+Confirme **7:45 todos os dias** e o texto de
+`rotinas/PROMPT-briefing-agenda-0745.md`.
+
+### Se `/schedule` não existir nesta sessão
+
+1. Diga com calma: “Vou deixar os textos prontos. Falta um clique seu no
+   app Claude.”
+2. Oriente o caminho mais simples que existir neste ambiente:
+   - **Claude Desktop / Code → Routines → New routine → Local (ou Cloud)**
+   - Horário: **Daily · 7:45**
+   - Cole o conteúdo de cada arquivo em `rotinas/`
+3. Não invente que a rotina já está ligada se não estiver.
+
+### Depois de criar as duas
+
+Diga em uma frase: “Pronto. Todo dia às 7:45 você recebe dois avisos:
+e-mails e agenda. O computador (ou a rotina na nuvem) precisa estar
+disponível nesse horário.”
+
+Só então pergunte: “Quer que eu faça mais alguma coisa agora — e-mail
+ou agenda?”
 
 ---
 
 ## Regras duras
 
-- Conduza a primeira experiência sozinho até o menu. Não jogue a pessoa
-  no escuro.
+- Conduza a primeira experiência sozinho até o menu **e** até ligar as
+  duas rotinas das 7:45. Não jogue a pessoa no escuro.
 - Autorização Google: avise → chame ferramenta → Permitir → **reexecute
   na hora**.
 - Enviar e-mail ou criar evento: sempre preview + “pode?”.
